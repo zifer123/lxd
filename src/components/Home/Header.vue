@@ -4,7 +4,7 @@
       <div class="flex-box align-items-center">
         <img class="logo nav-item" src="./imgs/logo-fitmix.png" alt="">
         <router-link :class="{active: activeNav=='/product'}" class="nav-item" to="/product">产品</router-link>
-        <router-link :class="{active: activeNav=='/whyChooseUs'}" class="nav-item" to="/whyChooseUs">体验</router-link>
+        <router-link :class="{active: activeNav=='/taste'}" class="nav-item" to="/taste">体验</router-link>
         <router-link :class="{active: activeNav=='/fun'}" class="nav-item" to="/fun">趣事</router-link>
         <router-link :class="{active: activeNav=='/app'}" class="nav-item" to="/app">APP</router-link>
         <router-link :class="{active: activeNav=='/map'}" class="nav-item" to="/map">地图</router-link>
@@ -29,10 +29,20 @@
 </script>
 
 <style scoped>
+  @media(max-width: 768px) {
+    nav.navbar {
+      opacity: 0;
+      height: 0;
+    }
+    nav.navbar > div {
+      display: none;
+    }
+  }
   .navbar {
-    min-height: 50px;
+    height: 50px;
     line-height: 50px;
     background-color: #3d3d3e;
+    transition: opacity .5s linear,height .5s linear;
   }
   .justcontent-between {
     justify-content: space-between;

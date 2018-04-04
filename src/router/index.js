@@ -11,10 +11,21 @@ export default new Router({
       path: '/',
       name: 'Home',
       component: Home,
+      redirect: '/product',
       children: [
         {
           path: 'product',
-          component: () => import('../components/Product')
+          component: () => {
+            return import('../components/Product')
+          }
+        },
+        {
+          path: 'taste',
+          component: () => import('../components/Taste')
+        },
+        {
+          path: 'fun',
+          component: () => import('../components/Fun')
         }
       ]
     }

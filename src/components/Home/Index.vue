@@ -1,20 +1,24 @@
 <template>
   <div class="bigBox">
     <Header></Header>
+    <MiniHeader></MiniHeader>
     <div class="flex-box flex-direction-column flex-1">
-      <router-view style="flex: 1;"></router-view>
+      <router-view style="flex: 1;background-color: #ededed;"></router-view>
       <Footer></Footer>
     </div>
+    <BackTop></BackTop>
   </div>
 </template>
 
 <script>
   import Header from './Header'
+  import MiniHeader from './MiniHeader'
   import Footer from './Footer'
   export default {
     components: {
       Header,
-      Footer
+      Footer,
+      MiniHeader
     }
   }
 </script>
@@ -22,7 +26,6 @@
 <style>
   .bigBox {
     display: flex;
-    color: #fff;
     flex-direction: column;
   }
   .container {
@@ -36,6 +39,9 @@
   }
   .align-items-center {
     align-items: center;
+  }
+  .justify-content-space-between {
+    justify-content: space-between;
   }
   .flex-direction-column {
     flex-direction: column;
