@@ -2,7 +2,7 @@
   <div class="bigBox">
     <Header></Header>
     <MiniHeader></MiniHeader>
-    <div class="flex-box flex-direction-column flex-1">
+    <div class="flex-box flex-direction-column flex-1" style="margin-top: 50px;">
       <router-view style="flex: 1;background-color: #ededed;"></router-view>
       <Footer></Footer>
     </div>

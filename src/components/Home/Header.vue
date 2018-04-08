@@ -22,8 +22,16 @@
   export default {
     data() {
       return {
-        activeNav: '/product'
+        activeNav: ''
       }
+    },
+    watch: {
+      $route(to,from) {
+        this.activeNav = to.fullPath;
+      }
+    },
+    mounted() {
+      this.activeNav = this.$route.fullPath;
     }
   }
 </script>
@@ -39,6 +47,9 @@
     }
   }
   .navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
     height: 50px;
     line-height: 50px;
     background-color: #3d3d3e;
