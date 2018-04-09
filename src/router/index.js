@@ -26,6 +26,14 @@ export default new Router({
         {
           path: 'fun',
           component: () => import('../components/Fun')
+        },
+        {
+          path: 'fitmix',
+          component: () => import('../components/Fitmix')
+        },
+        {
+          path: 'map',
+          component: () => import('../components/Map')
         }
       ]
     }

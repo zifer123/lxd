@@ -6,7 +6,7 @@
         <router-link :class="{active: activeNav=='/product'}" class="nav-item" to="/product">产品</router-link>
         <router-link :class="{active: activeNav=='/taste'}" class="nav-item" to="/taste">体验</router-link>
         <router-link :class="{active: activeNav=='/fun'}" class="nav-item" to="/fun">趣事</router-link>
-        <router-link :class="{active: activeNav=='/app'}" class="nav-item" to="/app">APP</router-link>
+        <router-link :class="{active: activeNav=='/fitmix'}" class="nav-item" to="/fitmix">APP</router-link>
         <router-link :class="{active: activeNav=='/map'}" class="nav-item" to="/map">地图</router-link>
       </div>
 

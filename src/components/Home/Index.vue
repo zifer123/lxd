@@ -2,6 +2,7 @@
   <div class="bigBox">
     <Header></Header>
     <MiniHeader></MiniHeader>
+    <!-- 这里加上margin-top的原因是flex布局失效了，可能是我加了两个header的原因，有时间再回来看看什么原因 -->
     <div class="flex-box flex-direction-column flex-1" style="margin-top: 50px;">
       <router-view style="flex: 1;background-color: #ededed;"></router-view>
       <Footer></Footer>

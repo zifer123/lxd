@@ -6,7 +6,7 @@
       <h1 @click="routeTo('/product')" :class="{'active': activeNav=='/product'}">产品</h1>
       <h1 @click="routeTo('/taste')" :class="{'active': activeNav=='/taste'}">体验</h1>
       <h1 @click="routeTo('/fun')" :class="{'active': activeNav=='/fun'}">趣事</h1>
-      <h1 @click="routeTo('/app')" :class="{'active': activeNav=='/app'}">APP</h1>
+      <h1 @click="routeTo('/fitmix')" :class="{'active': activeNav=='/fitmix'}">APP</h1>
       <h1 @click="routeTo('/map')" :class="{'active': activeNav=='/map'}">地图</h1>
       <h1 @click="routeTo('/f')" :class="{'active': $route.fullPage=='/product'}">商城</h1>
       <h1 @click="routeTo('/e')" :class="{'active': $route.fullPage=='/product'}">电台</h1>
@@ -51,7 +51,7 @@
   }
 </script>
 
-<style>
+<style scoped>
   @media(max-width: 768px) {
     nav.mini-header {
       opacity: 1;
