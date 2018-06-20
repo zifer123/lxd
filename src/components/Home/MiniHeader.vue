@@ -3,13 +3,13 @@
     <img class="logo" src="./imgs/logo-fitmix.png" alt="">
     <Icon :type="icon" color="#fff" size="36" style="margin-right: 5px;" @click.native="menuClick"></Icon>
     <div class="mini-menu" :class="{'active': isMenuShow}" id="miniMenu">
-      <h1 @click="routeTo('/product')" :class="{'active': activeNav=='/product'}">产品</h1>
-      <h1 @click="routeTo('/taste')" :class="{'active': activeNav=='/taste'}">体验</h1>
-      <h1 @click="routeTo('/fun')" :class="{'active': activeNav=='/fun'}">趣事</h1>
+      <h1 @click="routeTo('/product')" :class="{'active': activeNav=='/product'}">{{ $t('header.product') }}</h1>
+      <!--<h1 @click="routeTo('/taste')" :class="{'active': activeNav=='/taste'}">体验</h1>-->
+      <h1 @click="routeTo('/fun')" :class="{'active': activeNav=='/fun'}">{{ $t('header.funs') }}</h1>
       <h1 @click="routeTo('/fitmix')" :class="{'active': activeNav=='/fitmix'}">APP</h1>
-      <h1 @click="routeTo('/map')" :class="{'active': activeNav=='/map'}">地图</h1>
-      <h1 @click="routeTo('/f')" :class="{'active': $route.fullPage=='/product'}">商城</h1>
-      <h1 @click="routeTo('/e')" :class="{'active': $route.fullPage=='/product'}">电台</h1>
+      <h1 @click="routeTo('/map')" :class="{'active': activeNav=='/map'}">{{ $t('header.map') }}</h1>
+      <h1 @click="routeTo('/f')" :class="{'active': $route.fullPage=='/product'}">{{ $t('header.mall') }}</h1>
+      <h1 @click="routeTo('/e')" :class="{'active': $route.fullPage=='/product'}">{{ $t('header.radio') }}</h1>
     </div>
   </nav>
 </template>

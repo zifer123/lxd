@@ -5,8 +5,9 @@
 <script>
 export default {
   name: 'App',
-  components: {
-
+  components: {},
+  mounted() {
+    console.log(this.$route.query)
   }
 }
 </script>

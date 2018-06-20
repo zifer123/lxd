@@ -1,8 +1,11 @@
 <template>
   <div>
-    <div class="first">
-      <p class="coming-soon">即将到来</p>
-    </div>
+    <router-link to="/detail">
+      <div class="first">
+        <p class="coming-soon">{{ $t("product.comingSonn") }}</p>
+      </div>
+    </router-link>
+
     <div class="container">
       <h1 class="classify">{{ $t("product.hotSelling") }}</h1>
 
@@ -52,12 +55,12 @@
     <div class="product-footer">
       <Row class="container">
         <Col span="12" class="footer-description">
-          <h2 class="title">玩最好的，最好玩</h2>
-          <p class="text">这里有至in的运动装备，最好玩的智能产品，通过音乐，运动与科技的完美结合，</p>
-          <p class="text">给你最适合的运动激励方案。</p>
+          <h2 class="title">{{ $t("product.funniest") }}</h2>
+          <p class="text">{{ $t("product.description1") }}</p>
+          <p class="text">{{ $t("product.description2") }}</p>
         </Col>
         <Col span="12" class="footer-description">
-          <h3 class="more">发现更多好玩的装备</h3>
+          <h3 class="more" @click="$router.push('/fitmix')">{{ $t("product.more") }}</h3>
         </Col>
       </Row>
 
@@ -65,16 +68,16 @@
         <Row :gutter="16">
           <Col :xs="24" ::sm="12" :md="12" :lg="12">
             <div class="footer-bg bg1">
-              <h4 class="title">开启你的运动之旅</h4>
-              <p class="text">选择更适合你的运动激励方案</p>
-              <router-link to="/a" class="btn">开始选择</router-link>
+              <h4 class="title">{{ $t("product.beginSport") }}</h4>
+              <p class="text">{{ $t("product.select") }}</p>
+              <router-link to="/fitmix" class="btn">{{ $t("product.begin") }}</router-link>
             </div>
           </Col>
           <Col :xs="24" :sm="12" :md="12" :lg="12">
             <div class="footer-bg bg2">
-              <h4 class="title">进一步了解我们</h4>
-              <p class="text">如何重新定义运动新玩法</p>
-              <router-link to="/a" class="btn">了解更多</router-link>
+              <h4 class="title">{{ $t("product.learnAbout") }}</h4>
+              <p class="text">{{ $t("product.begin") }}</p>
+              <router-link to="/taste" class="btn">{{ $t("product.learnMore") }}</router-link>
             </div>
           </Col>
         </Row>

@@ -5,27 +5,27 @@
     </div>
     <div class="container center">
       <p class="footer-follow">
-        <img src="./imgs/weixin.png" alt="">
-        <img src="./imgs/weibo.png" alt="">
+        <router-link to="/product"><img src="./imgs/weixin.png" alt=""></router-link>
+        <a href="http://www.weibo.com/igeekery?from=myfollow_all&is_host=1"><img src="./imgs/weibo.png" alt=""></a>
       </p>
 
       <p class="footer-language">
-        <img src="./imgs/english.png" alt="">English
+        <span style="cursor: pointer;" @click="changeLanguage('en')"><img src="./imgs/english.png" alt="">English</span>
         |
-        <img src="./imgs/china.png" alt="">中文
+        <span style="cursor: pointer;" @click="changeLanguage('zh')"><img src="./imgs/china.png" alt="">中文</span>
       </p>
 
       <p class="footer-support">
-        <span>工作机会</span>
-        <span>关于我们</span>
-        <span>联系我们</span>
-        <span>隐私政策</span>
+        <span @click="$router.push('/joinUs')">{{ $t("footer.job") }}</span>
+        <span @click="$router.push('/aboutUs')">{{ $t("footer.aboutUs") }}</span>
+        <span @click="$router.push('/contactUs')">{{ $t("footer.contactUs") }}</span>
+        <span>{{ $t("footer.privacyPolicy") }}</span>
       </p>
 
       <p class="footer-copyright">
-        <span>粤ICP备15030586</span>
-        <span>深圳第一蓝筹科技有限公司</span>
-        <span>版权所有@2015-2016</span>
+        <span>{{ $t("footer.bei") }}</span>
+        <span>{{ $t("footer.company") }}</span>
+        <span>{{ $t("footer.copyright") }}</span>
       </p>
       <!--<div>-->
         <!--<h2 class="page-header">支持</h2>-->
@@ -77,6 +77,17 @@
   </footer>
 </template>
 
+<script>
+  export default {
+    methods: {
+      changeLanguage(language) {
+        localStorage.locale = language;
+        location.reload();
+      }
+    }
+  }
+</script>
+
 <style scoped>
   .gap {
     padding: 10px;
@@ -98,8 +109,14 @@
     width: 20px;
     vertical-align: bottom;
   }
+  .footer-support {
+    color: #969696;
+    font-size: 15px;
+    font-family: "微软雅黑";
+  }
   .footer-support span {
     padding: 0 20px;
+    cursor: pointer;
   }
   .footer-copyright {
     color: #969696;
